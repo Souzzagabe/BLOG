@@ -27,7 +27,6 @@
 .links_list {
     display: flex;
     list-style: none;
-    
 }
 .links_list li {
     display: flex;
@@ -36,9 +35,13 @@
     
 }
 
+nav ul li a:not(.active):hover {
+    background-color: rgba(240, 255, 255, 0.131);
+}
+
 .links_li a {
     padding: .4em .6em;
-   
+    display: block;
 }
 
 .active {
@@ -46,3 +49,54 @@
     color: blueviolet;
   }
   
+
+ .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+  }
+
+  .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+  }
+
+  @media (max-width: 480px) {
+    .menu {
+        display: flex;
+        margin: 0;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: start;
+    }
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar ul.open {
+        display: flex;
+        padding: 0;
+    }
+    .links_list ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+   .links_list > li > a {
+        margin: 0.2rem 0.5rem;
+        width: 100%;
+        font-size: 22px;
+    }
+  }
