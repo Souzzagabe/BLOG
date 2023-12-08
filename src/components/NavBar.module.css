@@ -16,7 +16,12 @@
     list-style: none;
     background-color: #242424;
     padding: 0;
-    
+    box-shadow: 0 10px 3px -9px rgba(255, 255, 255, 0.318);
+    transition: 1s ease;
+}
+
+.brand span:hover {
+    box-shadow: 0 0px 3px -9px rgba(255, 255, 255, 0.318);
 }
 
 .links_list {
