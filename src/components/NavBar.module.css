@@ -68,7 +68,7 @@ nav ul li a:not(.active):hover {
     border-radius: 0.2rem;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 580px) {
     .menu {
         display: flex;
         margin: 0;
@@ -97,6 +97,14 @@ nav ul li a:not(.active):hover {
    .links_list > li > a {
         margin: 0.2rem 0.5rem;
         width: 100%;
-        font-size: 22px;
+        font-size: 18px;
     }
+    .form {
+        padding: 0px 30px 52px 30px;
+        max-width: 0;
+    }
+    .footer {
+        height: auto;
+    }
+
   }
