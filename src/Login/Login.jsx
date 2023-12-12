@@ -5,11 +5,11 @@ import { useAuthentication } from '../hooks/useAuthentication'
 
 const Login = () => {
 
-  const [email, setEemail] = useState("")
+  const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
 
-  const {createUser, error: authError, loading} = useAuthentication()
+  const {login, error: authError, loading} = useAuthentication()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -18,13 +18,20 @@ const Login = () => {
 
     const user = {
       email,
-      password
+      password,
     }
 
-    const res = await createUser(user)
+    const res = await login(user)
 
     console.log(res)
   }
+
+  useEffect(() => {
+    console.log(authError);
+    if (authError) {
+      setError(authError);
+    }
+  }, [authError]);
 
   return (
     <div className={styles.login}>
@@ -38,7 +45,7 @@ const Login = () => {
             required
             placeholder='E-mail'
             value={email}
-            onChange={(e) => setEemail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
         <label>

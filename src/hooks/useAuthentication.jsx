@@ -1,4 +1,4 @@
-import {db} from "../firebase/config"
+import { db } from "../firebase/config"
 
 import {
     getAuth,
@@ -35,7 +35,7 @@ export const useAuthentication = () => {
         setError(null)
 
         try {
-            const { user } =  await createUserWithEmailAndPassword(
+            const { user } = await createUserWithEmailAndPassword(
                 auth,
                 data.email,
                 data.password
@@ -56,16 +56,17 @@ export const useAuthentication = () => {
             let systemError
 
             if (error.message.includes("Password")) {
-                systemError = "A senha precisa conter pelomenos 6 caracteres"
+                systemError = "Password must contain at least 6 characters"
             } else if (error.message.includes("email-already")) {
                 systemError = "E-mail already registered"
             } else {
                 systemError = "Error"
             }
-            
-            setLoading(false)
+
             setError(systemError)
         }
+        setLoading(false)
+
     }
 
     // logout
@@ -81,11 +82,51 @@ export const useAuthentication = () => {
 
     }, [])
 
+    // login
+
+    const login = async (data) => {
+
+        checkIfisCancelled()
+
+        setLoading(true)
+        setError(false)
+
+        try {
+            await signInWithEmailAndPassword(auth, data.email, data.password)
+
+        } catch (error) {
+            console.log(error.message);
+            console.log(typeof error.message);
+            console.log(error.message.includes("user-not"));
+
+            let systemError
+
+            if (error.message.includes("user-not-found")) {
+                systemError = "User not found."
+            } else if (error.message.includes("wrong-password")) {
+                systemError = "Wrong password"
+            } else {
+                systemError = "error occurred, please try later."
+            }
+            console.log(systemError)
+            setError(systemError)
+        }
+        console.log(error)
+        setLoading(false)
+
+    }
+
+    useEffect(() => {
+        return () => setCancelled(true)
+
+    }, [])
+
     return {
         auth,
         createUser,
         error,
         loading,
         logout,
+        login,
     }
 }

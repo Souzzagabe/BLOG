@@ -5,7 +5,7 @@ import { useAuthentication } from '../hooks/useAuthentication'
 
 const Register = () => {
   const [displayName, setDisplayName] = useState("")
-  const [email, setEemail] = useState("")
+  const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
@@ -63,7 +63,7 @@ const Register = () => {
             required
             placeholder='E-mail'
             value={email}
-            onChange={(e) => setEemail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
         <label>
@@ -87,7 +87,7 @@ const Register = () => {
           />
         </label>
         {!loading && <button className='btn'>Finish</button>}
-        {loading && <button className='btn' disabled>Wait..</button>}
+        {loading && <button className='btn' disabled>Loading..</button>}
         {error && <p className='error'>{error}</p>}
       </form>
 
