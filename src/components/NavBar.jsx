@@ -8,7 +8,7 @@ import { useAuthValue } from '../context/AuthContext'
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const { user } = useAuthValue()
-    const {logout} = useAuthentication()
+    const { logout } = useAuthentication()
 
     return (
         <nav className={styles.navbar}>
