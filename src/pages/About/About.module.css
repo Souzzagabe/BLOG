@@ -2,4 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.about_content span {
+    color: #D0ADF0;
+}
+
+.about_content a  {
+    display: block;
+    margin-top: 15px;
+    padding: 2px;
+    width: 120px;
+    background-color: white;
+    color: #b97bf2;
 }
