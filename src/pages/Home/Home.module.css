@@ -3,7 +3,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 50px;
 }
+
 
 .search_form {
     max-width: 100%;
@@ -12,13 +14,13 @@
     justify-content: center;
     align-items: center;
     justify-content: center;
+    box-shadow: none;
 }
 
 .search_form input {
-    margin-right: 1px;
     width: 50%;
-    height: 16px;
-    margin-top: auto;
+    height: 24px;
+    border: none;
 }
 
 .noposts {

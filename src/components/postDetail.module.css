@@ -1,0 +1,38 @@
+.post_detail {
+    margin-bottom: 2em;
+    max-width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 12px 10px -3px rgba(255, 255, 255, 0.185);
+  padding: 0px 70px 100px 70px;
+  border-radius: 6px;
+  margin-top: 80px;
+  }
+  
+  .post_detail img {
+    max-width: 600px;
+    margin-top: 100px;
+  }
+  
+  .post_detail h2 {
+    margin-bottom: 0.4em;
+  }
+  
+  .post_detail .tags {
+    margin-bottom: 1.2em;
+    display: flex;
+  }
+  
+  .tags p {
+    margin-right: 0.5em;
+  }
+  
+  .tags span {
+    font-weight: bold;
+  }
+  
+  .createdby {
+    font-style: italic;
+    color: #444;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+  }

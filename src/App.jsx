@@ -14,6 +14,7 @@ import Login from './Login/Login'
 import Register from './register/Register'
 import CreatePost from './pages/CreatePost/CreatePost'
 import Dashboard from './pages/Dashboard/Dashboard'
+import Search from './pages/search/Search'
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/About" element={<About />} />
+                <Route path="/Search" element={<Search />} />
                 <Route path="/Register" 
                 element={!user ? <Register/> : <Navigate to ="/" />} 
                 />
