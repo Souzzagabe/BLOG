@@ -2,4 +2,53 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.search_form {
+    max-width: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_form input {
+    margin-right: 1px;
+    width: 50%;
+    height: 16px;
+    margin-top: auto;
+}
+
+.noposts {
+    text-align: center;
+}
+
+.noposts a {
+    display: block;
+    margin-top: 30px;
+    padding: 2px;
+    width: 120px;
+}
+
+.noposts p {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5em;
+}
+
+.post-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.poste-list h2 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
 }

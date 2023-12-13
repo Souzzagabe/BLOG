@@ -76,7 +76,7 @@ textarea::placeholder {
 
 .btn {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.075);
   padding: 2px;
   width: 120px;
   justify-content: center;
@@ -92,12 +92,24 @@ textarea::placeholder {
 }
 
 .btn:hover {
-  background-color: #c0c0c0b1;
+  background-color: rgba(240, 255, 255, 0.13);
 }
 
 .btn.btn-dark {
-  background-color: #000;
-  border-radius: 0;
+  border-radius: 0px 8px 8px 0px;
+  border: 1px solid transparent;
+  padding: 2px;
+  width: 120px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 1s ease;
+  text-decoration: none !important;
+  margin-top: auto;
+  text-align: center;
 }
 
 .btn.btn-outline {

@@ -35,7 +35,7 @@ const Login = () => {
 
   return (
     <div className={styles.login}>
-      <h1>Login</h1>
+      <h3>Login</h3>
       <p>Log in to use the system.</p>
       <form onSubmit={handleSubmit}>
         <label>
@@ -58,7 +58,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        {!loading && <button className='btn'>Entrar</button>}
+        {!loading && <button className='btn'>Enter</button>}
         {loading && <button className='btn' disabled>Loading..</button>}
         {error && <p className='error'>{error}</p>}
       </form>
