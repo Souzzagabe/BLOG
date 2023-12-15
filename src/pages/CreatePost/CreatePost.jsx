@@ -52,7 +52,7 @@ const CreatePost = () => {
   return (
     <div className={styles.create_post}>
       <h2>Create Post</h2>
-      <p>Write about whatever you want and share your knowledge!</p>
+      <p>Use a website like unsplash and free photo sites and copy the photo address and paste it into the image url.</p>
       <form onSubmit={handleSubmit}>
         <label>
           <span>Title:</span>
