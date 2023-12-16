@@ -36,17 +36,15 @@ const EditPost = () => {
     e.preventDefault()
     setFormError("")
 
-    // Validate image
     try {
       new URL(image)
     } catch (error) {
       setFormError("The image must be a URL.")
     }
 
-    // Create tags array
     const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase())
 
-    // Check values
+
     if (!title || !image || !tags || !body) {
       setFormError("Please fill in all fields!")
     }
@@ -63,8 +61,6 @@ const EditPost = () => {
     }
 
     updateDocument(id, data)
-
-    // Redirect to the home page
     navigate("/dashboard")
   }
 

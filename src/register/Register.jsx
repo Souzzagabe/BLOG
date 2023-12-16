@@ -10,7 +10,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
 
-  const {createUser, error: authError, loading} = useAuthentication()
+  const { createUser, error: authError, loading } = useAuthentication()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -23,7 +23,7 @@ const Register = () => {
       password
     }
 
-    if(password !== confirmPassword){
+    if (password !== confirmPassword) {
       setError("Passwords must be the same")
       return
     }
@@ -35,7 +35,7 @@ const Register = () => {
 
   useEffect(() => {
 
-    if(authError) {
+    if (authError) {
       setError(authError)
     }
 

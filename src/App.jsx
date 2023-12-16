@@ -3,9 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useFetcher } from "react-router
 import { onAuthStateChanged } from 'firebase/auth'
 import { useState, useEffect } from 'react'
 import { useAuthentication } from './hooks/useAuthentication'
-
 import { AuthProvider } from './context/AuthContext'
-// PAGES
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import NavBar from './components/NavBar'
@@ -17,7 +15,6 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import Search from './pages/search/Search'
 import Post from './pages/Post/Post'
 import EditPost from './pages/EditPost/EditPost'
-
 
 function App() {
   const [user, setuser] = useState(undefined)
@@ -70,7 +67,6 @@ function App() {
         </AuthProvider>
       </div>
     </>
-
   )
 }
 

@@ -130,11 +130,6 @@ textarea::placeholder {
   text-align: center;
 }
 
-/* .btn:hover {
-  background-color: #0f730c;
-  color: #fff;
-} */
-
 .btn.btn-outline:hover {
   background-color: #3B3B3B;
 }

@@ -1,5 +1,5 @@
 import { db } from "../firebase/config"
-
+import { useState, useEffect } from "react"
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -8,14 +8,10 @@ import {
     signOut
 } from "firebase/auth"
 
-import { useState, useEffect } from "react"
 
 export const useAuthentication = () => {
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(null)
-
-    // cleanup
-    // deal with memory leak
 
     const [cancelled, setCancelled] = useState(false)
 
@@ -27,7 +23,6 @@ export const useAuthentication = () => {
         }
     }
 
-    // register
     const createUser = async (data) => {
         checkIfisCancelled()
 
@@ -69,8 +64,6 @@ export const useAuthentication = () => {
 
     }
 
-    // logout
-
     const logout = () => {
         checkIfisCancelled()
 
@@ -81,8 +74,6 @@ export const useAuthentication = () => {
         return () => setCancelled(true)
 
     }, [])
-
-    // login
 
     const login = async (data) => {
 
@@ -113,7 +104,6 @@ export const useAuthentication = () => {
         }
         console.log(error)
         setLoading(false)
-
     }
 
     useEffect(() => {

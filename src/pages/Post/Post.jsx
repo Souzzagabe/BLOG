@@ -21,7 +21,6 @@ const Post = () => {
                     {posts.tags.map((tag) => (
                         <p key={tag}>
                             <span>#</span>{tag}</p>
-
                     ))}
                     </div>
                 </>

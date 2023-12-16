@@ -7,7 +7,7 @@ const Footer = () => {
         <h3>
         Connecting ideas, sharing stories.
         </h3> 
-        <p>©Souzzagabe - All rights reserved.</p>
+        <a href="https://www.linkedin.com/in/gabriel-souza-0b6601269/">©Souzzagabe</a><p>All rights reserved.</p>
     </footer>
   )
 }
