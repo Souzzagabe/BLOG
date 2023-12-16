@@ -31,3 +31,29 @@
     max-width: 600px;
     margin-top: 100px;
 }
+
+@media (max-width: 910px) {
+    .post_container{
+        max-width: 68%;
+    }
+
+    .post_container h1 {
+        font-size: 30px;
+    }
+
+    .post_container img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 532px) {
+    .post_container{
+        max-width: 54%;
+    }
+    .post_container h1 {
+        font-size: 20px;
+    }
+
+    .post_container img {
+        max-width: 100%;
+    }
+}
