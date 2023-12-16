@@ -54,3 +54,11 @@
     flex-direction: column;
 
 }
+
+
+@media (max-width: 800px) {
+    .search_form {
+    margin: 0;
+    padding: 0;
+    }
+    }

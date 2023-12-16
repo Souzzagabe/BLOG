@@ -69,7 +69,7 @@ nav ul li a:not(.active):hover {
     border-radius: 0.2rem;
   }
 
-  @media (max-width: 580px) {
+  @media (max-width: 650px) {
     .menu {
         display: flex;
         margin: 0;

@@ -5,3 +5,7 @@
 .create_post p {
     font-style: italic;
 }
+
+@media (max-width: 383px) {
+   
+    }

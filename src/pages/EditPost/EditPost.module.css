@@ -1,0 +1,17 @@
+.edit_post {
+    text-align: center;
+}
+
+.edit_post p {
+    font-style: italic;
+}
+
+.edit_post .preview_title {
+    margin-bottom: 1em;
+    color: white;
+}
+
+.image_preview {
+    max-width: 100%;
+    margin-bottom: 1em;
+}

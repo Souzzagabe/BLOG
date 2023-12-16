@@ -22,11 +22,15 @@
   }
   
   .noposts p {
+    font-style: italic;
     margin-bottom: 1.5em;
   }
   
   .noposts a {
     padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .post_header {
@@ -65,3 +69,20 @@
     display: flex;
   }
 
+  @media (max-width: 860px) {
+    .search_form {
+    margin: 0;
+    padding: 0;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post_row {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    }

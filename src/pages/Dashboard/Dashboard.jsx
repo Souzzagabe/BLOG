@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 import { useAuthValue } from "../../context/AuthContext"
 import { useFetchDocuments } from "../../hooks/useFetchDocuments"
+import { useDeleteDocument } from '../../hooks/useDeleteDocument'
 
 
 const Dashboard = () => {
@@ -13,7 +14,7 @@ const Dashboard = () => {
   
     const { documents: posts } = useFetchDocuments("posts", null, uid);
   
-    // const { deleteDocument } = useDeleteDocument("posts");
+    const { deleteDocument } = useDeleteDocument("posts");
   
     console.log(uid);
     console.log(posts);
@@ -24,9 +25,9 @@ const Dashboard = () => {
         <p>Manage your posts</p>
         {posts && posts.length === 0 ? (
           <div className={styles.noposts}>
-            <p>Não foram encontrados posts</p>
+            <p>Post not found..</p>
             <Link to="/posts/create" className="btn">
-              Criar primeiro post
+              Create Post
             </Link>
           </div>
         ) : (

@@ -41,7 +41,7 @@ a, nav button {
 /* ALL FORMS */
 
 form {
-  max-width: 40%;
+  max-width: 50%;
   margin: 0 auto;
   box-shadow: 0 12px 10px -3px rgba(255, 255, 255, 0.185);
   padding: 0px 70px 100px 70px;
@@ -139,6 +139,13 @@ textarea::placeholder {
   background-color: #3B3B3B;
 }
 
+.btn.btn-danger {
+  padding: 2px;
+  width: 120px;
+  margin-top: 6px;
+  height: 34px;
+}
+
 .btn.btn-danger:hover {
   background-color: #dc3545;
 }
@@ -153,4 +160,11 @@ button[disabled] {
   border: 1px solid #f5c6cb;
   padding: 5px;
   border-radius: 5px;
+}
+
+@media (max-width: 499px) {
+  .form{
+    max-width: 100%;
+  }
+  
 }
