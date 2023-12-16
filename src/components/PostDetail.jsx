@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./PostDetail.module.css"
+import styles from '../components/PostDetail.module.css'
 import {Link} from "react-router-dom"
 
 const PostDetail = ({post}) => {
